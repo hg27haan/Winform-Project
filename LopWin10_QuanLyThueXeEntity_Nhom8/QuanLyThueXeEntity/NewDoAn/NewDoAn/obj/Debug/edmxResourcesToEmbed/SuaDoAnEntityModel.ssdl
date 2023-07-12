@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SuaDoAnEntityDFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietDatThue">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="MaXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayThue" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayTra" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DanhSachCacTaiKhoanKhachHang">
+    <Key>
+      <PropertyRef Name="TenDangNhap" />
+    </Key>
+    <Property Name="HoVaTenKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CMNDKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SoDienThoaiKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChiKhachHang" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DanhSachCacTaiKhoanNhanVien">
+    <Key>
+      <PropertyRef Name="TenDangNhap" />
+    </Key>
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LoaiTaiKhoan" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DanhSachXeHienTai">
+    <Key>
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="LoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HangXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SoLuongConLai" Type="int" Nullable="false" />
+    <Property Name="GiaThue" Type="int" Nullable="false" />
+    <Property Name="SoChuyen" Type="int" Nullable="false" />
+    <Property Name="DanhGia" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoanhThuDatXe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HangXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayThue" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayTra" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaDiemDon" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VatDeLai" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TienThueTaiXe" Type="int" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoanhThuNam">
+    <Key>
+      <PropertyRef Name="Thang" />
+    </Key>
+    <Property Name="Thang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoanhThuThang">
+    <Key>
+      <PropertyRef Name="Ngay" />
+    </Key>
+    <Property Name="Ngay" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoanhThuThucTe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayThanhToan" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoanhThuThueXe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HangXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayThue" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayTra" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaDiemDon" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VatDeLai" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TienThueTaiXe" Type="int" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LoaiXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HangXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenXe" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DanhGia" Type="float" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaGiamGia">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HSD" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ChiTietGiam" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SuaDoAnEntityDFModelStoreContainer">
+    <EntitySet Name="ChiTietDatThue" EntityType="Self.ChiTietDatThue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachCacTaiKhoanKhachHang" EntityType="Self.DanhSachCacTaiKhoanKhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachCacTaiKhoanNhanVien" EntityType="Self.DanhSachCacTaiKhoanNhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachXeHienTai" EntityType="Self.DanhSachXeHienTai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoanhThuDatXe" EntityType="Self.DoanhThuDatXe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoanhThuNam" EntityType="Self.DoanhThuNam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoanhThuThang" EntityType="Self.DoanhThuThang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoanhThuThucTe" EntityType="Self.DoanhThuThucTe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoanhThuThueXe" EntityType="Self.DoanhThuThueXe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedBack" EntityType="Self.FeedBack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaGiamGia" EntityType="Self.MaGiamGia" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
